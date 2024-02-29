@@ -1,0 +1,86 @@
+---
+title: "Project 1: Exposition and Curation Data"
+author: "Robert Williams"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    code_folding: hide
+    number_sections: false
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+---
+
+```{r init, include=F}
+# The package "ezids" (EZ Intro to Data Science) includes some helper functions we developed for the course. 
+# Some of the frequently used functions are loadPkg(), xkabledply(), xkablesummary(), uzscale(), etc.
+# You will need to install it (once) from GitHub.
+# library(devtools)
+# devtools::install_github("physicsland/ezids")
+# Then load the package in your R session.
+library(ezids)
+```
+
+
+```{r setup, include=FALSE}
+# Some of common RMD options (and the defaults) are: 
+# include=T, eval=T, echo=T, results='hide'/'asis'/'markup',..., collapse=F, warning=T, message=T, error=T, cache=T, fig.width=6, fig.height=4, fig.dim=c(6,4) #inches, fig.align='left'/'center','right', 
+knitr::opts_chunk$set(warning = F, message = F)
+# Can globally set option for number display format.
+options(scientific=T, digits = 3) 
+# options(scipen=9, digits = 3) 
+```
+
+```{r}
+# 1. Do not provide answers/comments inside code blocks (like here) -- those are notes between coders/self and will be ignored for grading. 
+# 2. Make sure your knitr options are set to include all results/code to be graded in the final document.
+# 3. All charts/graphs/tables should have appropriate titles/labels/captions. 
+# 4. Compose your answers using inline R code instead of using the code-block output as much as you can. 
+# 5. Your grade is also determined by the style. Even if you answer everything correctly, but the .html does not look appealing, you will not get full credit. Pay attention to the details that we mentioned in class/homework and in previous sample .Rmd files. For example, how to use #, ##, ###, ..., bold face, italics, inline codes, tables, ..., {results = "asis"}, use of colors in plots/ggplots, and so forth.
+```
+
+
+
+# Question 1  
+
+
+
+*References**
+
+**Strengthen SNAP Benefits. (2023, October 13). Retrieved from https://frac.salsalabs.org/update-13october2023?eType=EmailBlastContent&eId=abd0e534-77e3-409c-957e-ae342b6d3f50**
+
+**FFAC Staff. (2022, April 05). What Are Food Deserts and Why Do They Exist? Factory Farming Awareness Coalition. https://ffacoalition.org/articles/food-deserts/**
+
+**FFRA Staff. (2023, October 25). Food Research & Action Center Calls for WIC Funding, SNAP Benefit Adequacy as Rates of Hunger Rise. https://frac.org/news/usdafoodinsecurityreport2023**
+
+
+**Question 7 from Project Presentation - Code is above and write-up is below**
+
+**Q 7.  Can we quantify the extent of low access areas (e.g., LILATracts_1And10, LILATracts_1And20) in the dataset?**
+
+**Yes, we’re able to quantify the low access areas within the dataset, food_access_research_atlas.csv.**
+
+**For example, we create a block of R code to filter-out the variable, low income and low access tract measured at 1 mile for urban areas and 10 miles for rural areas, LILATracts_1And10, using the value, 1, to represent census tracts that had access and the value, 0, to represent census tracts that were not within the 1 mile to 10 miles range, non-access. We also did the same methodology for access of low income and low access tract measured at 1 mile for urban areas and 20 miles for rural areas, LILATracts_1And20, as well as non-access.**
+
+**What’s the percentage of census tracts fall into different categories of low access areas?**
+
+**For the variable, LILATracts_1And10, we ran the R code to filter access and non-access for low income and low access tract measured at 1 mile for urban areas and 10 miles for rural areas, LILATracts_1And10 and the results were the following:**
+
+**•	LILATracts_1And10**
+**Access census tract, 9,245, divided by total number of census tracts, 72,864  times .10 = 12.7%**
+**Non-access census tract, 63,619, divided by total number of census tracts, 72,864  times .10 = 87.3%**
+
+**•	LILATracts_1And20**
+**Access census tract, 8,105, divided by total number of census tracts, 72,864  times .10 = 11.1%**
+**Non-access census tract, 64759, divided by total number of census tracts, 72,864  times .10 = 88.9%**
+
+
+
+
+
+
+
+
